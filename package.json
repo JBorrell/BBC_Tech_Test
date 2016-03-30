@@ -1,0 +1,35 @@
+{
+  "name": "bbc",
+  "version": "1.0.0",
+  "description": "iPlayer Programme List",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JBorrell/BBC_Tech_Test.git"
+  },
+  "author": "James Borrell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JBorrell/BBC_Tech_Test/issues"
+  },
+  "homepage": "https://github.com/JBorrell/BBC_Tech_Test#readme",
+  "devDependencies": {
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.7"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8"
+  }
+}
