@@ -22,9 +22,19 @@ describe('iPlayerProgrammesController', function() {
         "avatar": "BlackSails.png"
       }
     ];
+    var httpBackend;
+    beforeEach(inject(function($httpBackend) {
+      httpBackend = $httpBackend
+      httpBackend
+        .when("GET", "https://ibl.api.bbci.co.uk//ibl/v1/atoz/a/programmes?page=2")
+        .respond(
+          { list: list }
+        );
+    }));
     it('displays list of avalable programmes', function(){
+      httpBackend.flush()
       expect(ctrl.searchResult.list).toEqual(list)
     });
   });
-  
+
 });
