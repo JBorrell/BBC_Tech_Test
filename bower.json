@@ -1,0 +1,23 @@
+{
+  "name": "BBC",
+  "homepage": "https://github.com/JBorrell/BBC_Tech_Test",
+  "authors": [
+    "JBorrell <boz_012@hotmail.com>"
+  ],
+  "description": "iPlayer Program Display",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "angular": "^1.5.3",
+    "angular-resource": "^1.5.3"
+  }
+}
