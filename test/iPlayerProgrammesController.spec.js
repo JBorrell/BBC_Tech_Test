@@ -35,6 +35,10 @@ describe('iPlayerProgrammesController', function() {
       httpBackend.flush()
       expect(ctrl.searchResult.list).toEqual(list)
     });
+    afterEach(function() {
+    httpBackend.verifyNoOutstandingExpectation();
+    httpBackend.verifyNoOutstandingRequest();
+   });
   });
 
 });

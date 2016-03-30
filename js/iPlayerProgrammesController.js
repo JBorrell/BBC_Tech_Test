@@ -1,19 +1,11 @@
-iPlayerProgrammes.controller('iPlayerProgrammesController', ['$resource', function($resource) {
+iPlayerProgrammes.controller('iPlayerProgrammesController', ['Search', function(Search) {
   var self = this;
-  var searchResource = $resource('https://ibl.api.bbci.co.uk//ibl/v1/atoz/a/programmes?page=2');
 
-  self.searchResult = searchResource.get();
-  // {
-  //   "list": [
-  //     {
-  //       "title": "Vikings",
-  //       "avatar": "vikings.png"
-  //     },
-  //     {
-  //       "title": "Black Sails",
-  //       "avatar": "BlackSails.png"
-  //     }
-  //   ]
-  // };
+  (self.searchResult = function(){
+    Search.query()
+      .then(function(response) {
+        self.searchResult = response.data
+      })
+  })()
 
 }]);
