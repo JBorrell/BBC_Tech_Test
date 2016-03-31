@@ -1,11 +1,16 @@
-td {
+/*#letters td {
   border: 1px solid black;
   margin: 30px;
   width: 15px;
   border-radius: 5px;
+}*/
+
+#letters {
+  margin: 0 auto;
+  text-align: center;
 }
 
-table {
+ table {
   width: 70%;
   margin: 0 auto;
   text-align: center;

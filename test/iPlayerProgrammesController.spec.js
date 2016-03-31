@@ -12,33 +12,24 @@ describe('iPlayerProgrammesController', function() {
   });
 
   describe('listing programmes', function() {
-    var list = [
-      {
-        "title": "Vikings",
-        "avatar": "vikings.png"
-      },
-      {
-        "title": "Black Sails",
-        "avatar": "BlackSails.png"
-      }
-    ];
     var httpBackend;
     beforeEach(inject(function($httpBackend) {
       httpBackend = $httpBackend
       httpBackend
-        .when("GET", "https://ibl.api.bbci.co.uk//ibl/v1/atoz/a/programmes?page=2")
+        .when("GET", "https://ibl.api.bbci.co.uk//ibl/v1/atoz/a/programmes")
         .respond(
-          { list: list }
+          { list: "list" }
         );
     }));
     it('displays list of avalable programmes', function(){
       httpBackend.flush()
-      expect(ctrl.searchResult.list).toEqual(list)
+      expect(ctrl.searchResult.list).toEqual("list")
     });
+
     afterEach(function() {
-    httpBackend.verifyNoOutstandingExpectation();
-    httpBackend.verifyNoOutstandingRequest();
-   });
-  });
+      httpBackend.verifyNoOutstandingExpectation();
+      httpBackend.verifyNoOutstandingRequest();
+     });
+    });
 
 });

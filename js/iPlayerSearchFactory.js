@@ -1,13 +1,13 @@
 iPlayerProgrammes.factory('Search', ['$http', function($http){
-  var queryUrl = 'https://ibl.api.bbci.co.uk//ibl/v1/atoz/a/programmes?page=2';
+  var queryUrl = 'https://ibl.api.bbci.co.uk//ibl/v1/atoz/a/programmes';
   return {
-    query: function() {
+    query: function(pageNo) {
       return $http({
         url: queryUrl,
-        method: 'GET'
-        // params: {
-        //   'q': searchTerm
-        // }
+        method: 'GET',
+        params: {
+          'page': pageNo
+        }
       });
     }
   }

@@ -16,24 +16,17 @@
       <h1>BBC iPlayer<h1>
     </div>
     <div id="letters">
-      <table>
-        <tr>
-          <td>A</td><td>B</td><td>C</td>
-          <td>D</td><td>E</td><td>F</td>
-          <td>G</td><td>H</td><td>I</td>
-          <td>J</td><td>K</td><td>L</td>
-          <td>M</td><td>N</td><td>O</td>
-          <td>P</td><td>Q</td><td>R</td>
-          <td>S</td><td>T</td><td>U</td>
-          <td>V</td><td>W</td><td>X</td>
-          <td>Y</td><td>Z</td>
-        </tr>
-      </table>
+      <span ng-repeat="x in iPlayerCtrl.alphabet" >
+        <button id="letter">{{x}}</button>
+      </span>
     </div>
     <ul class="list-group">
-      <li ng-repeat="prog in iPlayerCtrl.searchResult.atoz_programmes.elements">
+      <li ng-repeat="prog in iPlayerCtrl.searchResult">
         title:{{prog.title}}<br><br>
       </li>
     </ul>
+    <span id="pages" ng-repeat="x in iPlayerCtrl.pages">
+      <button ng-click='iPlayerCtrl.doSearch(x)'>{{x}}</button>
+    </span>
   </body>
   </html>
