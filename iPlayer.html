@@ -13,20 +13,27 @@
   </head>
   <body ng-controller="iPlayerProgrammesController as iPlayerCtrl">
     <div id="title">
-      <h1>BBC iPlayer<h1>
+      <img src="public/images/BBC_iPlayer_logo.svg">
     </div>
     <div id="letters">
       <span ng-repeat="x in iPlayerCtrl.alphabet" >
-        <button id="letter">{{x}}</button>
+        <button ng-click='iPlayerCtrl.doSearch(x, 1)'id="letter">{{x}}</button>
       </span>
     </div>
-    <ul class="list-group">
-      <li ng-repeat="prog in iPlayerCtrl.searchResult">
-        title:{{prog.title}}<br><br>
-      </li>
-    </ul>
-    <span id="pages" ng-repeat="x in iPlayerCtrl.pages">
-      <button ng-click='iPlayerCtrl.doSearch(x)'>{{x}}</button>
-    </span>
+    <div id="programmes">
+      <span ng-hide="iPlayerCtrl.pages <= 1">Page:</span>
+      <span ng-hide="iPlayerCtrl.pages <= 1" id="pages" ng-repeat="x in iPlayerCtrl.pages">
+        <button ng-click='iPlayerCtrl.doSearch(iPlayerCtrl.letter, x)'>{{x}}</button>
+      </span>
+      <div id="programme" ng-repeat="prog in iPlayerCtrl.searchResult">
+        <div id="image">
+          <img ng-src="{{iPlayerCtrl.image_url(prog.images.standard)}}">
+        </div>
+        <div id="text">
+          <h3>{{prog.title}}</h3>
+          <p id="synop">{{prog.synopses.small}}</p>
+        </div>
+      </div>
+  </div>
   </body>
   </html>
