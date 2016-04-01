@@ -9,26 +9,22 @@
     <script src="js/app.js"></script>
     <script src="js/iPlayerProgrammesController.js"></script>
     <script src="js/iPlayerSearchFactory.js"></script>
-    <link rel="stylesheet" href="public/main.css">
+    <link rel="stylesheet" href="visuals/main.css">
   </head>
-  <body ng-controller="iPlayerProgrammesController as iPlayerCtrl">
-    <div id="title">
-      <img src="public/images/BBC_iPlayer_logo.svg">
-    </div>
+  <body ng-controller="iPlayerProgrammesController as iPlayerCtrl" ng-init="iPlayerCtrl.doSearch('a', 1)">
+    <img id="logo" src="visuals/images/BBC_iPlayer_logo.svg">
     <div id="letters">
-      <span ng-repeat="x in iPlayerCtrl.alphabet" >
-        <button ng-click='iPlayerCtrl.doSearch(x, 1)'id="letter">{{x}}</button>
+      <span ng-repeat="letter in iPlayerCtrl.alphabet" >
+        <button ng-click='iPlayerCtrl.doSearch(letter, 1)'id="letter">{{letter}}</button>
       </span>
     </div>
     <div id="programmes">
       <span ng-hide="iPlayerCtrl.pages <= 1">Page:</span>
-      <span ng-hide="iPlayerCtrl.pages <= 1" id="pages" ng-repeat="x in iPlayerCtrl.pages">
-        <button ng-click='iPlayerCtrl.doSearch(iPlayerCtrl.letter, x)'>{{x}}</button>
+      <span ng-hide="iPlayerCtrl.pages <= 1" id="pages" ng-repeat="page in iPlayerCtrl.pages">
+        <button ng-click='iPlayerCtrl.doSearch(iPlayerCtrl.letter, page)'>{{page}}</button>
       </span>
       <div id="programme" ng-repeat="prog in iPlayerCtrl.searchResult">
-        <div id="image">
-          <img ng-src="{{iPlayerCtrl.image_url(prog.images.standard)}}">
-        </div>
+        <img id="image" ng-src="{{iPlayerCtrl.image_url(prog.images.standard)}}">
         <div id="text">
           <h3>{{prog.title}}</h3>
           <p id="synop">{{prog.synopses.small}}</p>

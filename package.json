@@ -23,14 +23,16 @@
     "karma-jasmine": "^0.3.8",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-spec-reporter": "0.0.25",
-    "phantomjs-prebuilt": "^2.1.7"
+    "phantomjs-prebuilt": "^2.1.7",
+    "protractor": "^3.2.2"
   },
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "karma-phantomjs-launcher": "^1.0.0",
+    "http-server": "^0.9.0",
     "karma-chrome-launcher": "^0.2.3",
-    "karma-jasmine": "^0.3.8"
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0"
   }
 }

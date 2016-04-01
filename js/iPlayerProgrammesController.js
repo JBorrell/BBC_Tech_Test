@@ -1,15 +1,6 @@
 iPlayerProgrammes.controller('iPlayerProgrammesController', ['Search', function(Search) {
   var self = this;
-  self.alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('');
-  self.letter = 'a';
-
-  (self.searchResult = function(){
-    Search.query(self.letter, 1)
-      .then(function(response) {
-        self.searchResult = response.data.atoz_programmes.elements
-        self.page_count(response);
-      })
-  })()
+  self.alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0-9".split(' ');
 
   self.doSearch = function(letter, pageNo) {
     self.letter = letter

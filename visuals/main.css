@@ -1,5 +1,23 @@
 body {
   font-family: Arial;
+  background-color: #252525;
+}
+
+button {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+h3 {
+  margin: 5px;
+}
+
+#pages button {
+  margin-bottom: 8px;
+}
+
+#letters button {
+  margin-top: 8px;
 }
 
 #letters {
@@ -7,8 +25,9 @@ body {
   text-align: center;
 }
 
-#title {
-  text-align: center;
+#logo {
+  display: block;
+  margin: 0 auto;
 }
 
 #programmes {
@@ -17,6 +36,7 @@ body {
   background: #1E1E1E;
   margin: 0 auto;
   width: 70%;
+  min-width: 220px;
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -29,7 +49,8 @@ body {
   width: 70%;
   margin: 0 auto;
   margin-bottom: 5px;
-  height: 108px;
+  min-height: 108px;
+  min-width: 193px;
   border-radius: 5px;
   background-color: #252525;
 }
@@ -39,32 +60,11 @@ body {
   margin-right: 10px;
 }
 
-h3 {
-  margin: 8px;
-}
-
-#pages button {
-  margin-bottom: 8px;
-}
-
-#letters button {
-  margin-top: 8px;
-}
-
-body {
-  background-color: #252525
-}
-
-button {
-  font-weight: bold;
-  font-size: 1em;
-}
 
 #title img {
   margin-top: 10px;
 }
 
 #synop {
-  color: #929292
-
+  color: #929292;
 }
