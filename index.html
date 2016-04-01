@@ -20,9 +20,8 @@
       </span>
     </div>
     <div id="programmes">
-      <span ng-hide="iPlayerCtrl.pages <= 1">Page:</span>
-      <span ng-hide="iPlayerCtrl.pages <= 1" id="pages"
-            ng-repeat="page in iPlayerCtrl.pages">
+      <span >Page:</span>
+      <span id="pages" ng-repeat="page in iPlayerCtrl.pages">
         <button ng-click='iPlayerCtrl.doSearch(iPlayerCtrl.letter, page)'>
           {{page}}</button>
         </span>

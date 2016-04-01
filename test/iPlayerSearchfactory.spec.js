@@ -43,9 +43,9 @@ describe('factory: Search', function() {
       httpBackend.flush()
   })
 
-  it('generates query url with parameters given', function() {
-    expect(search.query.generateUrl('s', 3))
-      .toEqual('https://ibl.api.bbci.co.uk//ibl/v1/atoz/s/programmes?page=3')
-  })
+  // it('generates query url with parameters given', function() {
+  //   expect(search.query.generateUrl('s', 3))
+  //     .toEqual('https://ibl.api.bbci.co.uk//ibl/v1/atoz/s/programmes?page=3')
+  // })
 
 });

@@ -36,9 +36,4 @@ describe('BBC iPlayer', function(){
     pages.get(3).click();
     expect(shows.first().getText()).toContain('Artsnight');
   })
-
-  it('hides page navigation if only 1 page of results', function(){
-    letters.get(26).click();
-    expect(element(by.id('pages')).isDisplayed()).toBeFalsy;
-  })
 });
