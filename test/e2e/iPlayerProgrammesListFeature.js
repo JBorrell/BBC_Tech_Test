@@ -4,7 +4,7 @@ describe('BBC iPlayer', function(){
   shows = element.all(by.repeater('prog in iPlayerCtrl.searchResult'));
 
   beforeEach(function(){
-    browser.get('http://localhost:8080/')
+    browser.get('http://bbc-iplayer.herokuapp.com')
   });
 
   it('has a title', function(){
@@ -13,7 +13,7 @@ describe('BBC iPlayer', function(){
 
   it('has a logo/title', function(){
     image = element(by.id('logo')).getAttribute('src');
-    expect(image).toEqual("http://localhost:8080/visuals/images/BBC_iPlayer_logo.svg");
+    expect(image).toEqual("http://bbc-iplayer.herokuapp.com/visuals/images/BBC_iPlayer_logo.svg");
   });
 
   it('able to browse all letter of the alphabet & 0-9', function(){
@@ -34,6 +34,6 @@ describe('BBC iPlayer', function(){
     expect(pages.count()).toEqual(4);
     expect(element(by.id('programmes')).getText()).toContain('Page:');
     pages.get(3).click();
-    expect(shows.first().getText()).toContain('Artsnight');
+    expect(shows.first().getText()).toContain('The Arts Show');
   })
 });
