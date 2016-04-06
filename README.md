@@ -5,6 +5,10 @@ List will display title and image of programs and can be sorted according to
 the first letter of the program. Results for a single letter will be
 displayed over multiple pages to ease readability.
 
+Heroku Link
+
+http://bbc-iplayer.herokuapp.com/
+
 Installation Instructions
 =========
 ##### Setup #####
@@ -14,7 +18,7 @@ Installation Instructions
 4. Run "open index.html"
 5. Use site as desired
 
-![](visuals/images/Screen_shot.png)
+![](public/visuals/images/Screen_shot.png)
 
 ##### Testing #####
 
