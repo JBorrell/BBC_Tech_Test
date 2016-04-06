@@ -19,6 +19,7 @@ Installation Instructions
 ##### Testing #####
 
 Karma
+
 1. Navigate to the home directory
 2. Run "karma start test/karma.conf.js" in your terminal
 
