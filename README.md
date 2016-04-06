@@ -14,6 +14,8 @@ Installation Instructions
 4. Run "open index.html"
 5. Use site as desired
 
+![](visuals/images/Screen_shot.png)
+
 ##### Testing #####
 
 Karma
@@ -37,7 +39,3 @@ Technologies
 - Jasmine
 - HTML5
 - CSS
-
-Author
-======
-James Borrell [LinkedIn](https://www.linkedin.com/in/james-borrell-2281b1116)
